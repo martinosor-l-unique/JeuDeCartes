@@ -1,0 +1,65 @@
+
+<HTML>
+
+<SCRIPT language=JavaScript>
+
+var tabb=new Array("rouge.png","rouge.png","rouge.png","bleu.png","bleu.png","vert.png");
+
+var Recharge=0;
+
+var texte="";
+
+var indiceb=0;
+var nbAffichage=0;
+
+// --------------------------------------------------------------------------
+function actionCarte1() {
+
+AfficherDos();
+
+if (Recharge==0)  {
+document.images['MaCarte1'].src=tabb[Math.floor(Math.random() * 6)];
+//document.images['MaCarte1'].src=tabb[3];
+Recharge=1;
+}
+else {
+window.location.reload(false); 
+}
+
+}
+// --------------------------------------------------------------------------
+
+function AfficherDos() {
+
+
+document.images['MaCarte1'].src="Dos.png";
+
+}
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+function AccesProtege() {
+	self.location.href=prompt("Mot de passe :","") + ".html";
+	}
+// --------------------------------------------------------------------------
+
+</SCRIPT>
+
+<BODY onload="Melange()">
+
+<P valign=center align=center>
+<BR><BR><BR>
+
+<a href="JavaScript:actionCarte1();" >
+<IMG NAME="MaCarte1" SRC="melange.gif" border="0">
+</a>
+</P>
+
+<BR>
+<P>
+<A HREF="javascript:AccesProtege()">Solution</A></P>
+</P>
+
+</BODY> 
+
+</HTML>
